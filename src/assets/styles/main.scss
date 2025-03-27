@@ -1,0 +1,201 @@
+// Variables
+$primary-color: #bb2c4b;
+$dark-bg: #110f15;
+$dark-secondary: #1a1921;
+$text-color: #ffffff;
+$section-padding: 60px 0;
+
+// Media Breakpoints
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Reset
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+// Layout utilities
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: $text-color;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.bg-dark {
+  background-color: $dark-bg;
+}
+
+.py-section {
+  padding: $section-padding;
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $primary-color;
+    color: $text-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $text-color;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+// Sections
+.section {
+  padding: $section-padding;
+
+  &-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    @include respond-to("xs") {
+      font-size: 1.8rem;
+    }
+
+    @include respond-to("md") {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+// Grid
+.grid {
+  display: grid;
+  gap: 20px;
+
+  &-2 {
+    grid-template-columns: 1fr;
+
+    @include respond-to("md") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &-3 {
+    grid-template-columns: 1fr;
+
+    @include respond-to("sm") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to("lg") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &-4 {
+    grid-template-columns: 1fr;
+
+    @include respond-to("sm") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to("lg") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+// Card styles
+.card {
+  background-color: $dark-secondary;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &-body {
+    padding: 20px;
+  }
+
+  &-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+}
+
+// Social icons
+.social-icons {
+  display: flex;
+  gap: 15px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
