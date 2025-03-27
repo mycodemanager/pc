@@ -6,7 +6,7 @@
         <div class="header-content">
           <div class="logo">
             <router-link to="/">
-              <img src="https://ext.same-assets.com/755940251/275760866.png" alt="Zestro Gaming" />
+              <img src="../../assets/logo.png" alt="Zestro Gaming" />
             </router-link>
           </div>
 
