@@ -10,6 +10,14 @@
             </router-link>
           </div>
 
+          <nav class="main-nav" :class="{ 'active': mobileMenuOpen }">
+            <ul>
+              <li><router-link to="/">Home</router-link></li>
+              <li><router-link to="/deals">Deals</router-link></li>
+              <li><router-link to="/gaming-pc">Gaming PC</router-link></li>
+            </ul>
+          </nav>
+
           <div class="menu-toggle" @click="toggleMobileMenu">
             <i class="fas fa-bars"></i>
           </div>

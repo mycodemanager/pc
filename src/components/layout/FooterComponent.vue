@@ -4,46 +4,17 @@
       <div class="container">
         <div class="footer-columns">
           <div class="footer-column">
-            <h3>For Customers</h3>
-            <ul>
-              <li><router-link to="/">Home</router-link></li>
-              <li><router-link to="/about">About Us</router-link></li>
-              <li><router-link to="/blog">Blog</router-link></li>
-              <li><router-link to="/account">My Account</router-link></li>
-              <li><router-link to="/account/orders">Order History</router-link></li>
-              <li><router-link to="/track-orders">Track Orders</router-link></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3>Company</h3>
-            <ul>
-              <li><router-link to="/shipping-policy">Shipping</router-link></li>
-              <li><router-link to="/refund-policy">Refund Policy</router-link></li>
-              <li><router-link to="/warranty-policy">Warranty</router-link></li>
-              <li><router-link to="/privacy-policy">Privacy Policy</router-link></li>
-              <li><router-link to="/terms">Terms & Conditions</router-link></li>
-              <li><router-link to="/sitemap">Sitemap</router-link></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3>Shop Now</h3>
-            <ul>
-              <li><router-link to="/gaming-pc">Gaming PC</router-link></li>
-              <li><router-link to="/graphic-cards">Graphic Cards</router-link></li>
-              <li><router-link to="/processors">Processors</router-link></li>
-              <li><router-link to="/motherboards">Motherboards</router-link></li>
-              <li><router-link to="/ram">RAM</router-link></li>
-              <li><router-link to="/storage">Storage</router-link></li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
             <h3>Karachi Address</h3>
             <p>Zestro Gaming Store, Shop # 45, Smart Plaza, Off University Road, Gulshan-e-Iqbal, Karachi</p>
             <h3 class="mt-4">Rawalpindi Address</h3>
             <p>Al Haram Plaza Shop no 5, Block A 2nd Floor Commercial Market Satellite Town Rawalpindi</p>
+          </div>
+          <div class="footer-column">
+            <h3>Payment methods</h3>
+            <div class="payment-box">
+              <img src="../../assets/payment/jazzcash.png" alt="Payment methods" />
+              <img src="../../assets/payment/easypaisa.png" alt="Payment methods" />
+            </div>
           </div>
         </div>
       </div>
@@ -66,7 +37,7 @@
 
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2024, Zestro Gaming All Rights Reserved.</p>
+        <p>Copyright © 2025 | Powered by Data Network Solutions</p>
       </div>
     </div>
   </footer>
@@ -88,17 +59,8 @@ export default {
     padding-bottom: 30px;
 
     .footer-columns {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 30px;
-
-      @media (min-width: 576px) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @media (min-width: 992px) {
-        grid-template-columns: repeat(4, 1fr);
-      }
+      display: flex;
+      justify-content: space-around;
     }
 
     .footer-column {
@@ -191,6 +153,16 @@ export default {
       font-size: 14px;
       color: #aaa;
     }
+  }
+}
+
+.payment-box {
+  display: flex;
+  gap: 10px;
+
+  img {
+    height: 60px;
+    border-radius: 6px;
   }
 }
 </style>

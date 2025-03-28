@@ -28,7 +28,7 @@ const routes = [
   {
     path: '/deals',
     name: 'Deals',
-    component: () => import('@/views/Deals.vue')
+    component: () => import('@/views/ZestroDealsPage.vue')
   },
   {
     path: '/product/:id',
