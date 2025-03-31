@@ -5,14 +5,14 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <router-link to="/">
+            <router-link to="/home">
               <img src="../../assets/logo.png" alt="Zestro Gaming" />
             </router-link>
           </div>
 
-          <nav class="main-nav" :class="{ 'active': mobileMenuOpen }">
+          <nav class="main-nav">
             <ul>
-              <li><router-link to="/">Home</router-link></li>
+              <li><router-link to="/home">Home</router-link></li>
               <li><router-link to="/deals">Deals</router-link></li>
               <li><router-link to="/gaming-pc">Gaming PC</router-link></li>
             </ul>
