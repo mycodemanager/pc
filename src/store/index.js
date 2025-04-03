@@ -543,7 +543,8 @@ export default new Vuex.Store({
         rating: 5,
         text: 'Its my first time making a gaming PC, team helped me out with the best available option in my budget which help alot for a person having minimal tech knowledge. It was a very easy process from start to finish.. Hoping to return for future upgrades. Keep it up guys.'
       }
-    ]
+    ],
+    cartItem:{},
   },
   getters: {
     featuredProducts: state => {
@@ -555,8 +556,12 @@ export default new Vuex.Store({
   },
   mutations: {
     // Mutations will be added as needed
+    setProducts(state, cartItem) {
+      state.cartItem = cartItem
+    },
   },
   actions: {
     // Actions will be added as needed
+
   }
 });

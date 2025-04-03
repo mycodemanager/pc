@@ -34,7 +34,7 @@
 
           <div class="product-actions">
 
-            <button class="add-to-cart-btn" @click="onBuyNow">BUY NOW</button>
+            <button class="add-to-cart-btn" @click="onBuyNow(product.id)">BUY NOW</button>
           </div>
         </div>
       </div>
@@ -80,9 +80,9 @@ export default {
         this.quantity--;
       }
     },
-    onBuyNow() {
+    onBuyNow(id) {
       // 在这里添加购买逻辑，例如添加到购物车或立即购买
-      this.$router.push({ name: 'payment' });
+      this.$router.push({ name: 'payment',params: { id } });
     }
   }
 };
