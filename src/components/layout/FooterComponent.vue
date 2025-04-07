@@ -37,7 +37,7 @@
 
     <div class="footer-bottom">
       <div class="container">
-        <p>Copyright © 2025 | Powered by Data Network Solutions</p>
+        <p>Copyright © 2025 | Powered by Data Network Solutions (SMC-Private) Limited</p>
       </div>
     </div>
   </footer>

@@ -13,4 +13,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    outDir: 'nextgenelectronics ',//想要把dist修改成什么名字在这边改
+  }
 });
